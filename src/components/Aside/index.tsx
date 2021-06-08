@@ -1,13 +1,13 @@
 import React from 'react';
 
+import { useTheme } from '../../hooks/theme';
+
 import {
   MdDashboard,
   MdArrowDownward,
   MdArrowUpward,
   MdExitToApp
 } from 'react-icons/md';
-
-import logoImg from '../../assets/logo.png';
 
 import { 
   Container,
@@ -18,10 +18,11 @@ import {
 } from './styles';
 
 const Aside: React.FC = () => {
+  const {theme} = useTheme();
   return(
     <Container>
       <Header>
-        <LogImg src={logoImg} alt="Sistema Financeiro - Douglas Rangel - WebMaster" />
+        <LogImg src={theme.colors.logo} alt="Sistema Financeiro - Douglas Rangel - WebMaster" />
       </Header>
 
       <MenuContainer>

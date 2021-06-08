@@ -1,10 +1,13 @@
+import logoImg from '../../assets/logo-white.png';
+
 const dark = {
   title: 'dark',
-
+  
   colors: {
     primary: '#1B1F38',
     secondary: '#252A48',
     tertiary: '#313862',
+    logo: logoImg,
 
     white: '#FFF',
     black: '#000',

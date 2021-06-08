@@ -1,3 +1,5 @@
+import logoImg from '../../assets/logo-color.png';
+
 const light = {
   title: 'light',
 
@@ -5,6 +7,7 @@ const light = {
     primary: '#DCDCDC',
     secondary: '#FFFFFF',
     tertiary: '#F5F5F5',
+    logo: logoImg,
 
     white: '#000',
     black: '#FFF',
