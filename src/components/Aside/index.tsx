@@ -2,6 +2,8 @@ import React from 'react';
 
 import { useTheme } from '../../hooks/theme';
 
+import { useAuth } from '../../hooks/auth';
+
 import {
   MdDashboard,
   MdArrowDownward,
@@ -14,11 +16,13 @@ import {
   Header,
   LogImg,
   MenuContainer,
-  MenuItemLink
+  MenuItemLink,
+  MenuItemButton,
 } from './styles';
 
 const Aside: React.FC = () => {
   const {theme} = useTheme();
+  const {signOut} = useAuth();
   return(
     <Container>
       <Header>
@@ -26,7 +30,7 @@ const Aside: React.FC = () => {
       </Header>
 
       <MenuContainer>
-        <MenuItemLink href="/dashboard">
+        <MenuItemLink href="/">
           <MdDashboard/>
           Dashboard
         </MenuItemLink>
@@ -41,10 +45,10 @@ const Aside: React.FC = () => {
           Saídas
         </MenuItemLink>
 
-        <MenuItemLink href="#">
+        <MenuItemButton onClick={signOut}>
           <MdExitToApp/>
           Sair
-        </MenuItemLink>
+        </MenuItemButton>
       </MenuContainer>
     </Container>
   );
